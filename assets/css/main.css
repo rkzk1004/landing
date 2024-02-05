@@ -167,11 +167,13 @@
     display: none;
   }
   .sc-intro .img2{
-    top: -20rem;
-    left: -20rem;
+    display: none;
   }
   .sc-intro .img3{
-    display: none;
+    bottom: -15rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
   }
   .sc-intro .img4{
     top: 40rem;
