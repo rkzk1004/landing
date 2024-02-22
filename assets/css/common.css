@@ -70,6 +70,7 @@
 .promise-hover .char:nth-child(10){transition-delay: .27s;}
 .promise-hover .char:nth-child(11){transition-delay: .30s;}
 .promise-hover .char:nth-child(12){transition-delay: .33s;}
+.promise-hover .char:nth-child(13){transition-delay: .36s;}
 .promise-hover span:first-child .char{
   transform: scaleY(1);
   transform-origin: top;
