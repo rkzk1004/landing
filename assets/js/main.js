@@ -135,10 +135,10 @@ circleTl
 .from('.sc-circle .circle-1',{yPercent:350},'a+=0.2')
 
 .to('.sc-circle .circle-1',{width:'250rem',height:'250rem'},'b')
-.to('.sc-circle .circle-2',{width:'250rem',height:'250rem'},'b+=0.04')
-.to('.sc-circle .circle-3',{width:'250rem',height:'250rem'},'b+=0.09')
-.to('.sc-circle .circle-4',{width:'250rem',height:'250rem'},'b+=0.14')
-.to('.sc-circle .circle-4 img',{width:'320px',height:'320px'},'b+=0.18')
+.to('.sc-circle .circle-2',{width:'250rem',height:'250rem'},'b+=0.06')
+.to('.sc-circle .circle-3',{width:'250rem',height:'250rem'},'b+=0.13')
+.to('.sc-circle .circle-4',{width:'250rem',height:'250rem'},'b+=0.2')
+.to('.sc-circle .circle-4 img',{width:'320px',height:'320px'},'b+=0.25')
 
 // sc-promise
 const promiseTl = gsap.timeline({
