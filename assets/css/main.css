@@ -29,7 +29,7 @@
 }
 .sc-intro-motion .marquee .list{
   display: flex;
-  animation: 12s marquee1 linear infinite;
+  animation: 23s marquee1 linear infinite;
   -webkit-text-stroke: 3px #fff;
   -webkit-text-fill-color: transparent;
 }
@@ -39,7 +39,7 @@
   z-index: 3;
 }
 .sc-intro-motion .marquee.reverse .list{
-  animation: 12s marquee2 linear infinite;
+  animation: 23s marquee2 linear infinite;
   -webkit-text-stroke:initial;
   -webkit-text-fill-color: #fff;
 }
