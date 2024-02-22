@@ -154,6 +154,9 @@
 .footer .title-area{
   position: relative;
 }
+.footer .promise-hover.name .char:nth-child(3) {
+  margin-right: 0;
+}
 .footer .group-bottom{
   position: absolute;
   bottom: 0;
