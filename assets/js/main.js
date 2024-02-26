@@ -7,7 +7,7 @@ gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
 })
 gsap.ticker.lagSmoothing(0)
-lenis.scrollTo(0)
+// lenis.scrollTo(0)
 
 // split
 const headlinetitle = new SplitType('.sc-intro .headline', { types: 'words, chars', });
@@ -76,46 +76,43 @@ introTl
 .to('.sc-intro',{filter:'blur(10px)',opacity:0})
 
 // sc-project
-const projectTitle = new SplitType('.sc-project .title', { types: 'words, chars', });
-$('.sc-project .group-content').each(function(idx,item){
-  const projectTl = gsap.timeline({
-    scrollTrigger:{
-      // markers:true,
-      trigger:item,
-      start:'0 60%',
-      end:'100% 100%',
-      // scrub:true
-    }
-  })
-  projectTl
-  .to($(this).find('.title .char'),{
-    transform: 'translateY(0%)',
-    stagger:{
-      from:"random",
-      each:0.1,
-    }
-  },'a')
-  .to($(this).find('.cate span'),{transform: 'translateY(0%)'},'a')
-  .to($(this).find('.link-area a'),{transform: 'translateY(0%)'},'a')
+// const projectTitle = new SplitType('.sc-project .title', { types: 'words, chars', });
+// $('.sc-project .group-content').each(function(idx,item){
+//   const projectTl = gsap.timeline({
+//     scrollTrigger:{
+//       trigger:item,
+//       start:'0 60%',
+//       end:'100% 100%',
+//     }
+//   })
+//   projectTl
+//   .to($(this).find('.title .char'),{
+//     transform: 'translateY(0%)',
+//     stagger:{
+//       from:"random",
+//       each:0.1,
+//     }
+//   },'a')
+//   .to($(this).find('.cate span'),{transform: 'translateY(0%)'},'a')
+//   .to($(this).find('.link-area a'),{transform: 'translateY(0%)'},'a')
 
-  const stickyTl = gsap.to(item,{
-    scrollTrigger:{
-      // markers:true,
-      trigger:item,
-      start:'40% 0%',
-      end:'100% 0%',
-      scrub:true
-    },
-    filter:'blur(5px)',
-    '--opacity':1,
-  })
-})
+//   const stickyTl = gsap.to(item,{
+//     scrollTrigger:{
+//       trigger:item,
+//       start:'40% 0%',
+//       end:'100% 0%',
+//       scrub:true
+//     },
+//     filter:'blur(5px)',
+//     '--opacity':1,
+//   })
+// })
 
-$('.sc-project a').hover(function(){
-  $('.sc-project .name').css({opacity:.5})
-},function(){
-  $('.sc-project .name').css({opacity:1})
-})
+// $('.sc-project a').hover(function(){
+//   $('.sc-project .name').css({opacity:.5})
+// },function(){
+//   $('.sc-project .name').css({opacity:1})
+// })
 
 // sc-circle
 const circleTl = gsap.timeline({
@@ -153,7 +150,7 @@ promiseTl
 .from('.sc-promise .headline span',{y:'1rem',duration:0.5},'a')
 .from('.sc-promise .text span',{yPercent:100,duration:0.5},'a')
 
-// sc-promise cursor
+// cursor-img
 $(window).mousemove(function(e){
   const cursorX = e.clientX
   const cursorY = e.clientY
@@ -161,6 +158,15 @@ $(window).mousemove(function(e){
     x:cursorX,
     y:cursorY,
     // ease:"none"
+  })
+})
+$('.sc-project .content-area').each(function(idx,item){
+  const dataName = $(item).data('img')
+  $(item).hover(function(){
+    $(dataName).addClass('on')
+    $('.sc-project .content-area .promise-hover').siblings().$(dataName).removeClass('on')
+  },function(){
+    $(dataName).removeClass('on')
   })
 })
 $('.promise-hover').each(function(idx,item){
