@@ -18,20 +18,3 @@
     src: url('../font/Pretendard-Black.woff') format('woff');
     font-weight: 700;
 }
-
-
-@font-face {
-    font-family: 'en';
-    src: url('../font/6594259965ca848a371eee1c_MABRYPRO-LIGHT.woff2') format('woff2');
-    font-weight: 300;
-}
-@font-face {
-    font-family: 'en';
-    src: url('../font/6594259965ca848a371eee1b_MABRYPRO-MEDIUM.woff2') format('woff2');
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'en';
-    src: url('../font/6594259965ca848a371eee1a_MABRYPRO-BOLD.woff2') format('woff2');
-    font-weight: 700;
-}

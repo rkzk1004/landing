@@ -74,7 +74,7 @@ const introTl = gsap.timeline({
   }
 })
 introTl
-.to('.sc-intro',{filter:'blur(10px)',yPercent:-40,opacity:0})
+.to('.sc-intro',{filter:'blur(10px)',yPercent:-25,opacity:0})
 
 // sc-project
 const projectTl = gsap.timeline({
