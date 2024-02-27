@@ -23,16 +23,16 @@ introMotionTl
 //   duration:1,
 //   ease:'circ.out',
 // })
-.from('.sc-intro .char',{
-  yPercent:100,
+.to('.sc-intro .char',{
+  yPercent:-100,
   delay:1.3,
   stagger:{
     from:"random",
     each:0.1,
   }
 })
-.from('.sc-intro img',{
-  scale:0,
+.to('.sc-intro img',{
+  scale:1,
   stagger:{
     from:"random",
     each:0.1,
@@ -87,7 +87,8 @@ const projectTl = gsap.timeline({
 })
 projectTl
 .from('.sc-project .side-text .text',{y:'2rem'},'a')
-.from('.sc-project .promise-hover',{yPercent:60,opacity:0,duration:1.5},'a')
+.from('.sc-project .inner1 .desc',{yPercent:200,opacity:0},'a')
+.from('.sc-project .promise-hover',{yPercent:150,opacity:0},'a')
 
 // sc-circle
 const circleTl = gsap.timeline({

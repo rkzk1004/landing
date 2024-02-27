@@ -18,6 +18,12 @@
   overflow: hidden;
   white-space: nowrap;
 }
+.sc-intro .headline .char{
+  transform: translateY(100%);
+}
+.sc-intro img{
+  transform: scale(0);
+}
 .sc-intro .img1{
   position: absolute;
   top: 13rem;
@@ -25,6 +31,7 @@
   width: 140px;
   height: auto;
   filter: blur(2px);
+  z-index: -1;
 }
 .sc-intro .img2{
   position: absolute;
@@ -32,7 +39,6 @@
   left: -5.5rem;
   width: 340px;
   height: auto;
-  transform: rotate(30deg);
 }
 .sc-intro .img3{
   position: absolute;
@@ -48,7 +54,6 @@
   right: 40rem;
   width: 150px;
   height: auto;
-  transform: rotate(-90deg);
   z-index: -1;
 }
 .sc-intro .img5{
@@ -154,10 +159,9 @@
 .sc-project .inner2{
   padding-top: 0;
 }
-.sc-project .inner2 .desc{
-  margin-top: 2rem;
-  font-size: 16px;
-  color: rgba(255,255,255,.6);
+.sc-project .inner .side-text{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
 }
 .sc-project .group-content{
   display: flex;
@@ -198,6 +202,16 @@
 .sc-project .content-area .text-hover:hover span{
   color: var(--color-main);
 }
+.sc-project .inner .desc{
+  color: rgba(255,255,255,.6);
+  font-weight: 500px;
+}
+.sc-project .inner1 .desc{
+  margin-bottom: 2rem;
+}
+.sc-project .inner2 .desc{
+  margin-top: 2rem;
+}
 @media(max-width:767px){
   .sc-project .inner{
     flex-direction: column;
@@ -206,9 +220,8 @@
     position: relative;
     margin-bottom: 10rem;
   }
-  .sc-project .inner2 .desc{
-    font-size: 14px;
-    line-height: 5rem;
+  .sc-project .inner .desc{
+    display: none;
   }
 }
 @media(max-width:800px){
