@@ -74,19 +74,20 @@ const introTl = gsap.timeline({
   }
 })
 introTl
-.to('.sc-intro',{filter:'blur(10px)',opacity:0})
+.to('.sc-intro',{filter:'blur(10px)',yPercent:-40,opacity:0})
 
 // sc-project
 const projectTl = gsap.timeline({
   scrollTrigger:{
     // markers:true,
     trigger:'.sc-project .inner1',
-    start:'0 75%',
+    start:'0 60%',
     scrub:false
   }
 })
 projectTl
-.from('.sc-project .side-text .text',{y:'2rem'})
+.from('.sc-project .side-text .text',{y:'2rem'},'a')
+.from('.sc-project .promise-hover',{yPercent:60,opacity:0},'a')
 
 // sc-circle
 const circleTl = gsap.timeline({
