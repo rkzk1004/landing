@@ -48,8 +48,6 @@
   display: inline-block;
   font-size: 13rem;
 }
-.promise-hover.epic .char:nth-child(4){margin-right: 35px;}
-.promise-hover.name .char:nth-child(3){margin-right: 35px;}
 .promise-hover span:last-child{
   position: absolute;
   top: 0;
@@ -90,15 +88,13 @@
 }
 @media(max-width:767px){
   .promise-hover{font-size: 20rem;}
-  .promise-hover.epic .char:nth-child(4){margin-right: 15px;}
-  .promise-hover.name .char:nth-child(3){margin-right: 15px;}
 }
 
 /* font-24 */
 .fs-24{
   font-size: 24px;
 }
-@media(max-width:767px){
+@media(max-width:800px){
   .fs-24{
     font-size: 18px;
   }

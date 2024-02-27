@@ -17,14 +17,15 @@ const promiseHover = new SplitType('.promise-hover span', { types: 'words, chars
 // intro-motion
 const introMotionTl = gsap.timeline({})
 introMotionTl
-.to('.sc-intro-motion',{
-  'clip-path': 'circle(0% at 50% 50%)',
-  delay:2,
-  duration:1,
-  ease:'circ.out',
-})
+// .to('.sc-intro-motion',{
+//   'clip-path': 'circle(0% at 50% 50%)',
+//   delay:2,
+//   duration:1,
+//   ease:'circ.out',
+// })
 .from('.sc-intro .char',{
   yPercent:100,
+  delay:1.3,
   stagger:{
     from:"random",
     each:0.1,
@@ -76,43 +77,16 @@ introTl
 .to('.sc-intro',{filter:'blur(10px)',opacity:0})
 
 // sc-project
-// const projectTitle = new SplitType('.sc-project .title', { types: 'words, chars', });
-// $('.sc-project .group-content').each(function(idx,item){
-//   const projectTl = gsap.timeline({
-//     scrollTrigger:{
-//       trigger:item,
-//       start:'0 60%',
-//       end:'100% 100%',
-//     }
-//   })
-//   projectTl
-//   .to($(this).find('.title .char'),{
-//     transform: 'translateY(0%)',
-//     stagger:{
-//       from:"random",
-//       each:0.1,
-//     }
-//   },'a')
-//   .to($(this).find('.cate span'),{transform: 'translateY(0%)'},'a')
-//   .to($(this).find('.link-area a'),{transform: 'translateY(0%)'},'a')
-
-//   const stickyTl = gsap.to(item,{
-//     scrollTrigger:{
-//       trigger:item,
-//       start:'40% 0%',
-//       end:'100% 0%',
-//       scrub:true
-//     },
-//     filter:'blur(5px)',
-//     '--opacity':1,
-//   })
-// })
-
-// $('.sc-project a').hover(function(){
-//   $('.sc-project .name').css({opacity:.5})
-// },function(){
-//   $('.sc-project .name').css({opacity:1})
-// })
+const projectTl = gsap.timeline({
+  scrollTrigger:{
+    // markers:true,
+    trigger:'.sc-project .inner1',
+    start:'0 75%',
+    scrub:false
+  }
+})
+projectTl
+.from('.sc-project .side-text .text',{y:'2rem'})
 
 // sc-circle
 const circleTl = gsap.timeline({
@@ -135,7 +109,7 @@ circleTl
 .to('.sc-circle .circle-2',{width:'250rem',height:'250rem'},'b+=0.06')
 .to('.sc-circle .circle-3',{width:'250rem',height:'250rem'},'b+=0.13')
 .to('.sc-circle .circle-4',{width:'250rem',height:'250rem'},'b+=0.2')
-.to('.sc-circle .circle-4 img',{width:'320px',height:'320px'},'b+=0.25')
+.to('.sc-circle .circle-4 img',{width:'320px',height:'320px'},'b+=0.22')
 
 // sc-promise
 const promiseTl = gsap.timeline({
@@ -147,7 +121,7 @@ const promiseTl = gsap.timeline({
   }
 })
 promiseTl
-.from('.sc-promise .headline span',{y:'1rem',duration:0.5},'a')
+.from('.sc-promise .side-text span',{y:'1rem',duration:0.5},'a')
 .from('.sc-promise .text span',{yPercent:100,duration:0.5},'a')
 
 // cursor-img
