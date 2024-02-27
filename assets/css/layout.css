@@ -173,31 +173,9 @@
 .footer .group-bottom .btn-scrollup:hover{
   color: var(--color-main);
 }
-.footer img{
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: auto;
-}
 @media(max-width:1199px){
   .footer .group-content .promise-hover{
     font-size: 20rem;
-  }
-  .footer img{
-    width: 200px;
-  }
-}
-@media(max-width:767px){
-  .footer img{
-    width: 140px;
-    bottom: -20px;
-  }
-}
-@media(max-width:499px){
-  .footer img{
-    display: none;
   }
 }
 
@@ -232,4 +210,9 @@
   width: 360px;
   height: 360px;
   object-fit: cover;
+}
+@media(max-width:767px){
+  .cursor-img{
+    display: none;
+  }
 }

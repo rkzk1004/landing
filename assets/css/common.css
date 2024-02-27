@@ -111,6 +111,11 @@
   white-space: nowrap;
   overflow: hidden;
 }
+@media(max-width:800px){
+  .side-text{
+    width: fit-content;
+  }
+}
 
 /* dot */
 .dot{
@@ -119,4 +124,9 @@
   height: 10px;
   background: var(--color-main);
   border-radius: 100%;
+}
+@media(max-width:800px){
+  .dot{
+    margin-right: 1rem;
+  }
 }

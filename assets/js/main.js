@@ -7,7 +7,7 @@ gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
 })
 gsap.ticker.lagSmoothing(0)
-// lenis.scrollTo(0)
+lenis.scrollTo(0)
 
 // split
 const headlinetitle = new SplitType('.sc-intro .headline', { types: 'words, chars', });
@@ -87,7 +87,7 @@ const projectTl = gsap.timeline({
 })
 projectTl
 .from('.sc-project .side-text .text',{y:'2rem'},'a')
-.from('.sc-project .promise-hover',{yPercent:60,opacity:0},'a')
+.from('.sc-project .promise-hover',{yPercent:60,opacity:0,duration:1.5},'a')
 
 // sc-circle
 const circleTl = gsap.timeline({
