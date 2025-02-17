@@ -113,7 +113,8 @@
 }
 .sc-project .content-area .text-hover{
   opacity: 0;
-  transition: opacity .6s cubic-bezier(.76,0,.24,1), color .3s;
+  transition: opacity 0.2s linear;
+  color: rgba(255,255,255,.6);
 }
 .sc-project .content-area:hover .text-hover{
   opacity: 1;
@@ -131,6 +132,7 @@
   margin-left: 10px;
   margin-bottom: 2rem;
 }
+.sc-project .inner0 .desc,
 .sc-project .inner2 .desc{
   line-height: 1.5;
 }

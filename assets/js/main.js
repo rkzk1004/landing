@@ -38,6 +38,10 @@ introMotionTl
     each:0.1,
   }
 })
+.to('.header .group-gnb',{
+  opacity: 1,
+  delay: 0.5
+})
 
 // btn-menu
 const menuTl = gsap.timeline({paused:true})
@@ -80,14 +84,14 @@ introTl
 const projectTl = gsap.timeline({
   scrollTrigger:{
     // markers:true,
-    trigger:'.sc-project .inner1',
+    trigger:'.sc-project .inner0',
     start:'0 60%',
     scrub:false
   }
 })
 projectTl
 .from('.sc-project .side-text .text',{y:'2rem'},'a')
-.from('.sc-project .inner1 .desc',{yPercent:200,opacity:0},'a')
+.from('.sc-project .inner0 .desc',{yPercent:200,opacity:0},'a')
 .from('.sc-project .promise-hover',{yPercent:150,opacity:0},'a')
 
 // sc-circle

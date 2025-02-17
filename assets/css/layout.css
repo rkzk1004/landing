@@ -30,6 +30,7 @@
   justify-content: flex-end;
   padding: 30px;
   z-index: 99;
+  opacity: 0;
 }
 .header .title a{
   display: flex;
