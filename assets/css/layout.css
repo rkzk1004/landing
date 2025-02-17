@@ -27,7 +27,7 @@
 .header .group-gnb{
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 30px;
   z-index: 99;
 }
@@ -45,40 +45,30 @@
   gap: 50px;
 }
 .header .gnb .btn-menu{
+  position: relative;
   display: flex;
   flex-direction: column;
   font-size: 40px;
+  height: 35px;
+  overflow: hidden;
   text-transform: uppercase;
 }
 .header .gnb .btn-menu:hover{
   color: var(--color-main);
 }
-.header .gnb .btn-menu [class*='col-']{
-  height: 40px; 
-  overflow: hidden;
-}
-.header .gnb .btn-menu .col-bottom{margin-left: 15px;}
-.header .gnb .btn-menu [class*='col-'] .text-area{
+.header .gnb .btn-menu span {
   position: relative;
-  display: flex;
-  width: 33px;
-  height: 100%;
-  transition: transform .2s linear;
+  transition: all 0.1s linear;
 }
-.header .gnb .btn-menu.on [class*='col-'] .text-area{
+.header .gnb .btn-menu.on span {
   transform: translateY(-100%);
 }
-.header .gnb .btn-menu [class*='col-'] span{
+.header .gnb .btn-menu span:after {
+  content: "back";
   position: absolute;
-  top: 0;
-  transition: transform .2s linear;
+  top: 100%;
+  left: 0;
 }
-.header .gnb .btn-menu .col-top span:first-child{left: 0;}
-.header .gnb .btn-menu .col-top span:last-child{left: 100%;}
-.header .gnb .btn-menu:hover .col-top span{transform: translateX(-100%);}
-.header .gnb .btn-menu .col-bottom span:first-child{left: 0;}
-.header .gnb .btn-menu .col-bottom span:last-child{left: -100%;}
-.header .gnb .btn-menu:hover .col-bottom span{transform: translateX(100%);}
 .header .group-menu{
   position: fixed;
   top: 0;
