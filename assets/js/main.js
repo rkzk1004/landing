@@ -130,6 +130,26 @@ promiseTl
 .from('.sc-promise .side-text span',{y:'1rem',duration:0.5},'a')
 .from('.sc-promise .text span',{yPercent:100,duration:0.5},'a')
 
+// sc-promise cursor
+// $(window).mousemove(function(e){
+//   const cursorX = e.clientX
+//   const cursorY = e.clientY
+//   gsap.to('.cursor-img',1,{
+//     x:cursorX,
+//     y:cursorY,
+//     // ease:"none"
+//   })
+// })
+// $('.promise-hover').each(function(idx,item){
+//   const dataName = $(item).data('img')
+//   $(item).hover(function(){
+//     $(dataName).addClass('on')
+//     $(this).siblings().$(dataName).removeClass('on')
+//   },function(){
+//     $(dataName).removeClass('on')
+//   })
+// })
+
 // footer
 $('.btn-scrollup').click(function(){
   window.scrollTo({
