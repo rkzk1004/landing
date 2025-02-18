@@ -167,12 +167,12 @@
 
 /* sc-circle */
 .sc-circle{
-  height: 900vh;
   /* border: 2px solid #f00; */
   font-family: 'Bebas Neue', sans-serif;
 }
-.sc-circle .sticky-container{
-  height: 900vh;
+.sc-circle,
+.sc-circle .sticky-container {
+  height: 850vh;
 }
 .sc-circle .group-sticky{
   position: sticky;
@@ -245,7 +245,7 @@
   background: #000;
   overflow: hidden;
 }
-.sc-circle .circle-4 footer{
+.sc-circle .circle-4 > div{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -258,17 +258,17 @@
   align-items: center;
   justify-content: center;
 }
-.sc-circle .circle-4 footer small {
+.sc-circle .circle-4 > div small {
   position: absolute;
   left: 50px;
   bottom: 30px;
 }
-.sc-circle .circle-4 footer button {
+.sc-circle .circle-4 > div button {
   position: absolute;
   bottom: 30px;
   right: 50px;
 }
-.sc-circle .circle-4 footer button:hover {
+.sc-circle .circle-4 > div button:hover {
   color: var(--color-main);
 }
 @media(max-width:1199px){

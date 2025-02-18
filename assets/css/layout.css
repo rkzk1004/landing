@@ -129,3 +129,20 @@
     font-size: 70px;
   }  
 }
+
+/* footer */
+.footer {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer * {
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+}
+.footer button:hover {
+  color: var(--color-main);
+}
