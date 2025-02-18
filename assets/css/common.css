@@ -91,13 +91,22 @@
   .promise-hover{font-size: 20rem;}
 }
 
-/* font-24 */
+/* font-size */
 .fs-24{
   font-size: 24px;
 }
 @media(max-width:800px){
   .fs-24{
     font-size: 18px;
+  }
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+@media (max-width:800px) {
+  .fs-20 {
+    font-size: 16px;
   }
 }
 

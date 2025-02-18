@@ -14,7 +14,7 @@ const headlinetitle = new SplitType('.sc-intro .headline', { types: 'words, char
 const textHover = new SplitType('.text-hover span', { types: 'words, chars', });
 const promiseHover = new SplitType('.promise-hover span', { types: 'words, chars', });
 
-// intro-motion
+// 인트로효과
 const introMotionTl = gsap.timeline({})
 introMotionTl
 // .to('.sc-intro-motion',{
@@ -43,7 +43,7 @@ introMotionTl
   delay: 0.5
 })
 
-// btn-menu
+// 메뉴효과
 const menuTl = gsap.timeline({paused:true})
 menuTl
 .to('.group-menu',{yPercent:100},'a')
@@ -67,7 +67,7 @@ $('.btn-contact').click(function(){
   $('html,body').scrollTop($(document).height())
 })
 
-// sc-intro
+// 스크롤시 최상단 페이지 사라짐
 const introTl = gsap.timeline({
   scrollTrigger:{
     // markers:true,
@@ -80,12 +80,12 @@ const introTl = gsap.timeline({
 introTl
 .to('.sc-intro',{filter:'blur(10px)',yPercent:-25,opacity:0})
 
-// sc-project
+// 일정 스크롤에 닿으면 프로젝트 컨텐츠 출력
 const projectTl = gsap.timeline({
   scrollTrigger:{
     // markers:true,
     trigger:'.sc-project .inner0',
-    start:'0 60%',
+    start:'0 50%',
     scrub:false
   }
 })
@@ -94,7 +94,7 @@ projectTl
 .from('.sc-project .inner0 .desc',{yPercent:200,opacity:0},'a')
 .from('.sc-project .promise-hover',{yPercent:150,opacity:0},'a')
 
-// sc-circle
+// 스크롤을 내리면 동그라미 커짐
 const circleTl = gsap.timeline({
   scrollTrigger:{
     // markers:true,
@@ -112,25 +112,11 @@ circleTl
 .from('.sc-circle .circle-1',{yPercent:350},'a+=0.2')
 
 .to('.sc-circle .circle-1',{width:'250rem',height:'250rem'},'b')
-.to('.sc-circle .circle-2',{width:'250rem',height:'250rem'},'b+=0.06')
-.to('.sc-circle .circle-3',{width:'250rem',height:'250rem'},'b+=0.13')
-.to('.sc-circle .circle-4',{width:'250rem',height:'250rem'},'b+=0.2')
-.to('.sc-circle .circle-4 img',{width:'320px',height:'320px'},'b+=0.22')
+.to('.sc-circle .circle-2',{width:'250rem',height:'250rem'},'b+=0.07')
+.to('.sc-circle .circle-3',{width:'250rem',height:'250rem'},'b+=0.15')
+.to('.sc-circle .circle-4',{width:'150rem',height:'150rem'},'b+=0.21')
 
-// sc-promise
-const promiseTl = gsap.timeline({
-  scrollTrigger:{
-    // markers:true,
-    trigger:'.sc-promise',
-    start:'0 70%',
-    end:'100% 100%',
-  }
-})
-promiseTl
-.from('.sc-promise .side-text span',{y:'1rem',duration:0.5},'a')
-.from('.sc-promise .text span',{yPercent:100,duration:0.5},'a')
-
-// sc-promise cursor
+// 호버시 이미지 출력
 // $(window).mousemove(function(e){
 //   const cursorX = e.clientX
 //   const cursorY = e.clientY
@@ -150,7 +136,7 @@ promiseTl
 //   })
 // })
 
-// footer
+// 버튼 클릭시 최상단으로 이동
 $('.btn-scrollup').click(function(){
   window.scrollTo({
     top:0,
