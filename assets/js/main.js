@@ -116,25 +116,25 @@ circleTl
 .to('.sc-circle .circle-3',{width:'250rem',height:'250rem'},'b+=0.15')
 .to('.sc-circle .circle-4',{width:'150rem',height:'150rem'},'b+=0.21')
 
-// 호버시 이미지 출력
-// $(window).mousemove(function(e){
-//   const cursorX = e.clientX
-//   const cursorY = e.clientY
-//   gsap.to('.cursor-img',1,{
-//     x:cursorX,
-//     y:cursorY,
-//     // ease:"none"
-//   })
-// })
-// $('.promise-hover').each(function(idx,item){
-//   const dataName = $(item).data('img')
-//   $(item).hover(function(){
-//     $(dataName).addClass('on')
-//     $(this).siblings().$(dataName).removeClass('on')
-//   },function(){
-//     $(dataName).removeClass('on')
-//   })
-// })
+// 커서따라다니는 이미지 (호버시 이미지 출력)
+$(window).mousemove(function(e){
+  const cursorX = e.clientX
+  const cursorY = e.clientY
+  gsap.to('.cursor-img',1,{
+    x:cursorX,
+    y:cursorY,
+    // ease:"none"
+  })
+})
+$('.promise-hover').each(function(idx,item){
+  const dataName = $(item).data('img')
+  $(item).hover(function(){
+    $(dataName).addClass('on')
+    $(this).siblings().$(dataName).removeClass('on')
+  },function(){
+    $(dataName).removeClass('on')
+  })
+})
 
 // 버튼 클릭시 최상단으로 이동
 $('.btn-scrollup').click(function(){

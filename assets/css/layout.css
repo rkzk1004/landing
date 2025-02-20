@@ -14,6 +14,29 @@
   margin-top: 100vh;
 }
 
+/* cursor-img */
+.cursor-img {
+  width: 18.75vw;
+  height: 18.75vw;
+  pointer-events: none;
+}
+.cursor-img .wrap {
+  height: 100%;
+}
+.cursor-img .wrap img {
+  height: 100%;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transition: all 0.3s linear;
+}
+.cursor-img .wrap img.on {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+@media (max-width: 767px) {
+  .cursor-img {
+    display: none;
+  }
+}
+
 /* header */
 .header{
   position: fixed;
